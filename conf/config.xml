@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="config.xsd">
+	<servers>
+		<server>
+			<hostName>sunny.fors.ru</hostName>
+			<port>80</port>
+			<contextRoot>archiva</contextRoot>
+			<protocol>http</protocol>
+			<authconfig/>
+		</server>
+		<server>
+			<hostName>sunny.fors.ru</hostName>
+			<port>80</port>
+			<contextRoot>jenkins/j_acegi_security_check</contextRoot>
+			<protocol>http</protocol>
+			<authconfig>
+				<param name="j_username" value="sahmed"/>
+				<param name="j_password" value="xyz"/>
+			</authconfig>
+		</server>
+		<server>
+			<hostName>sunny.fors.ru</hostName>
+			<port>80</port>
+			<contextRoot>sonar11/sessions/new</contextRoot>
+			<protocol>http</protocol>
+			<authconfig>
+				<param name="login" value="sahmed"/>
+				<param name="password" value="xyz"/>
+				<param name="commit" value="Log+in"/>
+				<param name="remember_me" value="1"/>
+			</authconfig>
+		</server>
+		<server>
+			<hostName>sunny.fors.ru</hostName>
+			<port>80</port>
+			<contextRoot>jira/login.jsp</contextRoot>
+			<protocol>http</protocol>
+			<authconfig>
+				<param name="os_username" value="sahmed"/>
+				<param name="os_password" value="xyz"/>
+				<param name="atl_token" value="e78a6e1fa29c510929dfcd0e14d4b0c00366cfe4"/>
+				<param name="os_cookie" value="true"/>
+				<param name="os_destination" value="/secure/Dashboard.jspa"/>
+				<param name="login" value="Вход"/>
+			</authconfig>
+		</server>
+	</servers>
+	<settings>
+		<smtp>
+			<host>172.27.0.3</host>
+			<port>25</port>
+			<username>fdcadmin</username>
+			<password>DulunsAdvu</password>
+			<from>fdcadmin@fors.ru</from>
+			<subject>Уведомление об отказе сервера sunny</subject>
+			<msgTemplate>Некоторые сервреы вышли из строй на сервере sunny.fors.ru, а имеено:</msgTemplate>
+		</smtp>
+		<notifications>
+		   <!-- deprecated-->
+			<interval>1</interval>
+			<emails>sahmed@fors.ru</emails>
+		</notifications>
+		<report>
+			<name>report.html</name>
+			<format>html</format>
+		</report>
+	</settings>
+</config>
