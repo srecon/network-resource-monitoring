@@ -28,15 +28,7 @@ public class StartService {
 
         JobDetail jobDetail = newJob(MonitorJob.class).withIdentity("monitorJob").build();
         jobDetail.getJobDataMap().put("monitorTask", new MonitorTask());
-        // define trigger
-        /*Trigger trigger = newTrigger().withIdentity("monitorTrigger").startNow()
-                                      .withSchedule(simpleSchedule()
-                                      .withIntervalInMinutes(config.getSettings().getNotifications().getInterval())
-                                      .repeatForever())
-                                      //.withIntervalInSeconds(20).repeatForever())
-                                      //.modifiedByCalendar("holidays")
-                                      .build();
-        */
+
         // define cron - every minute on 9-17 by mon-fri
         Trigger trigger = null;
         try {
