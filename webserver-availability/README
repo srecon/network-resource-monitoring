@@ -1,0 +1,11 @@
+E:\WorkSpace\MyProjects\Webserver-avaibility\webserver-availability\src\main\resources>xjc config.xsd -p ru.fors.diagnostics.config -d ../java/
+parsing a schema...
+compiling a schema...
+ru\fors\diagnostics\config\Config.java
+ru\fors\diagnostics\config\Notifications.java
+ru\fors\diagnostics\config\ObjectFactory.java
+ru\fors\diagnostics\config\Report.java
+ru\fors\diagnostics\config\Server.java
+ru\fors\diagnostics\config\Servers.java
+ru\fors\diagnostics\config\Settings.java
+ru\fors\diagnostics\config\Smtp.java
